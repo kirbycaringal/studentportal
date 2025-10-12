@@ -206,13 +206,21 @@
     /* Registration Form Styles */
     .pdf-container {
         background: white;
-        padding: 40px;
+        padding: 25px;
         box-shadow: 0 0 8px rgba(0,0,0,0.2);
-        font-size: 14px;
-        max-width: 800px;   /* A4-like width */
+        font-size: 12px;
+        max-width: 420px;
         width: 100%;
         margin: 0 auto;
     }
+
+
+
+
+
+
+
+
     .section-title {
         font-weight: bold;
         text-align: left;
@@ -617,12 +625,7 @@
         }
         
         /* Registration Form Mobile Styles */
-        .pdf-container {
-            padding: 20px;
-        }
-        .signature-line {
-            width: 150px;
-        }
+    
         
         /* Announcements Mobile Styles */
         .announcements-container {
@@ -1133,98 +1136,129 @@
                     <h2 class="grades-title"><i class="fas fa-file-alt"></i> Registration Form</h2>
                     
                     <div class="pdf-container">
-                      <!-- Header -->
-                      <div class="text-center">
-                        <h5 class="mb-0">MANUEL S. ENVERGA UNIVERSITY FOUNDATION</h5>
-                        <small>Candelaria, Quezon <br> Tel: (042) 710-3188 | registrar@mseuf.edu.ph</small>
-                        <h6 class="mt-3 mb-4 fw-bold">STUDENT REGISTRATION FORM</h6>
+                      <!-- Header with Logo -->
+                      <div class="text-center mb-3">
+                        <img src="photo/mseuflogo.png" alt="MSEUF Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                        <h6 class="mb-0 mt-2" style="font-size: 11px; font-weight: bold;">MANUEL S. ENVERGA UNIVERSITY FOUNDATION</h6>
+                        <small style="font-size: 9px;">Candelaria, Quezon</small>
+                        <h6 class="mt-2 mb-3 fw-bold" style="font-size: 12px;">REGISTRATION FORM</h6>
                       </div>
 
-                      <!-- Student Information -->
-                      <h6 class="section-title">Personal Information</h6>
-                      <table class="table table-bordered form-table">
-                        <tbody>
-                          <tr><td><strong>Full Name:</strong></td><td>Juan Torres Dela Cruz</td></tr>
-                          <tr><td><strong>Date of Birth:</strong></td><td>October 24, 2004</td></tr>
-                          <tr><td><strong>Sex:</strong></td><td>Male</td></tr>
-                          <tr><td><strong>Citizenship:</strong></td><td>Filipino</td></tr>
-                          <tr><td><strong>Religion:</strong></td><td>Roman Catholic</td></tr>
-                          <tr><td><strong>Permanent Address:</strong></td><td>Candelaria, Quezon</td></tr>
-                          <tr><td><strong>Contact No.:</strong></td><td>0991 770 0123</td></tr>
-                          <tr><td><strong>Email:</strong></td><td>juandirection@gmail.com</td></tr>
-                        </tbody>
-                      </table>
-
-                      <!-- Parent Information -->
-                      <h6 class="section-title">Parent / Guardian Information</h6>
-                      <table class="table table-bordered form-table">
-                        <tbody>
-                          <tr><td><strong>Father's Name:</strong></td><td>Jose Dela Cruz</td></tr>
-                          <tr><td><strong>Occupation:</strong></td><td>Engineer</td></tr>
-                          <tr><td><strong>Mother's Name:</strong></td><td>Maria Dela Cruz</td></tr>
-                          <tr><td><strong>Occupation:</strong></td><td>Teacher</td></tr>
-                          <tr><td><strong>Guardian (if not parents):</strong></td><td>—</td></tr>
-                        </tbody>
-                      </table>
-
-                      <!-- Educational Background -->
-                      <h6 class="section-title">Educational Background</h6>
-                      <table class="table table-bordered form-table">
-                        <thead class="table-light">
-                          <tr>
-                            <th>Level</th>
-                            <th>School</th>
-                            <th>Location</th>
-                            <th>Year Graduated</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Elementary</td>
-                            <td>Candelaria Elementary School</td>
-                            <td>Candelaria, Quezon</td>
-                            <td>2016</td>
-                          </tr>
-                          <tr>
-                            <td>High School</td>
-                            <td>Tayabas Western Academy</td>
-                            <td>Tayabas, Quezon</td>
-                            <td>2020</td>
-                          </tr>
-                          <tr>
-                            <td>Senior High</td>
-                            <td>Quezon Science High School</td>
-                            <td>Lucena, Quezon</td>
-                            <td>2022</td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                      <!-- Course -->
-                      <h6 class="section-title">Enrollment Information</h6>
-                      <table class="table table-bordered form-table">
-                        <tbody>
-                          <tr><td><strong>Course to Enroll:</strong></td><td>Bachelor of Science in Information Technology</td></tr>
-                          <tr><td><strong>Year Level:</strong></td><td>1st Year</td></tr>
-                          <tr><td><strong>Semester:</strong></td><td>First Semester AY 2025–2026</td></tr>
-                        </tbody>
-                      </table>
-
-                      <!-- Consent -->
-                      <h6 class="section-title">Consent and Declaration</h6>
-                      <p>
-                        I hereby certify that the above information is true and correct to the best of my knowledge. I fully understand that any false information given herein shall be sufficient cause for rejection of my application or dismissal from the University.
-                      </p>
-
-                      <div class="d-flex justify-content-between mt-5">
-                        <div class="text-center">
-                          <span class="signature-line"></span>
-                          <p>Signature of Student</p>
+                      <!-- Photo and Basic Info Section -->
+                      <div class="row mb-3">
+                        <div class="col-4 text-center">
+                          <div style="width: 100%; aspect-ratio: 3/4; border: 2px solid #800000; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999;">
+                            <div>
+                              <i class="fas fa-user" style="font-size: 30px; display: block; margin-bottom: 5px;"></i>
+                              2x2 Photo
+                            </div>
+                          </div>
+                          <small style="font-size: 9px; display: block; margin-top: 3px;">ID Photo</small>
                         </div>
-                        <div class="text-center">
-                          <span class="signature-line"></span>
-                          <p>Signature of Parent/Guardian</p>
+                        <div class="col-8">
+                          <div style="font-size: 10px; line-height: 1.6;">
+                            <div class="mb-2">
+                              <strong>Student ID:</strong> A22-0001
+                            </div>
+                            <div class="mb-2">
+                              <strong>Name:</strong><br>Juan Torres Dela Cruz
+                            </div>
+                            <div class="mb-2">
+                              <strong>Course:</strong><br>BS Information Technology
+                            </div>
+                            <div class="mb-2">
+                              <strong>Year:</strong> 1st Year
+                            </div>
+                          </div>
                         </div>
+                      </div>
+
+                      <!-- Personal Information - Compact -->
+                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
+                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">PERSONAL INFORMATION</h6>
+                        <div style="font-size: 9px; line-height: 1.7;">
+                          <div class="row mb-1">
+                            <div class="col-6"><strong>Birth Date:</strong> Oct 24, 2004</div>
+                            <div class="col-6"><strong>Sex:</strong> Male</div>
+                          </div>
+                          <div class="row mb-1">
+                            <div class="col-6"><strong>Civil Status:</strong> Single</div>
+                            <div class="col-6"><strong>Religion:</strong> Catholic</div>
+                          </div>
+                          <div class="mb-1">
+                            <strong>Address:</strong> Candelaria, Quezon
+                          </div>
+                          <div class="row mb-1">
+                            <div class="col-6"><strong>Contact:</strong> 0991 770 0123</div>
+                            <div class="col-6"><strong>Email:</strong> juan@email.com</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Parent/Guardian Info - Compact -->
+                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
+                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">PARENT/GUARDIAN</h6>
+                        <div style="font-size: 9px; line-height: 1.7;">
+                          <div class="mb-1">
+                            <strong>Father:</strong> Jose Dela Cruz - Engineer
+                          </div>
+                          <div class="mb-1">
+                            <strong>Mother:</strong> Maria Dela Cruz - Teacher
+                          </div>
+                          <div class="mb-1">
+                            <strong>Contact:</strong> 0917 123 4567
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Educational Background - Compact -->
+                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
+                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">EDUCATIONAL BACKGROUND</h6>
+                        <div style="font-size: 9px; line-height: 1.6;">
+                          <div class="mb-1">
+                            <strong>Elementary:</strong> Candelaria ES (2016)
+                          </div>
+                          <div class="mb-1">
+                            <strong>High School:</strong> Tayabas Western Academy (2020)
+                          </div>
+                          <div class="mb-1">
+                            <strong>Senior High:</strong> Quezon Science HS (2022)
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Enrollment Info -->
+                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
+                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">ENROLLMENT DETAILS</h6>
+                        <div style="font-size: 9px; line-height: 1.7;">
+                          <div class="mb-1">
+                            <strong>Semester:</strong> 1st Sem, AY 2025-2026
+                          </div>
+                          <div class="mb-1">
+                            <strong>Date Enrolled:</strong> June 10, 2025
+                          </div>
+                          <div class="mb-1">
+                            <strong>Status:</strong> Regular Student
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Signatures - Compact -->
+                      <div style="margin-top: 20px; font-size: 9px;">
+                        <div class="row">
+                          <div class="col-6 text-center">
+                            <div style="border-bottom: 1px solid #000; margin: 0 10px 3px 10px; height: 30px;"></div>
+                            <div>Student Signature</div>
+                          </div>
+                          <div class="col-6 text-center">
+                            <div style="border-bottom: 1px solid #000; margin: 0 10px 3px 10px; height: 30px;"></div>
+                            <div>Parent/Guardian</div>
+                          </div>
+                        </div>
+                        <div class="text-center mt-3" style="font-size: 8px; color: #666;">
+                          Date Issued: October 12, 2025
+                        </div>
+                      </div>
                     </div>
                     
                     <!-- Download Button -->
