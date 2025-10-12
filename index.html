@@ -206,10 +206,10 @@
     /* Registration Form Styles */
     .pdf-container {
         background: white;
-        padding: 25px;
+        padding: 12px;
         box-shadow: 0 0 8px rgba(0,0,0,0.2);
-        font-size: 12px;
-        max-width: 420px;
+        font-size: 10px;
+        max-width: 380px;
         width: 100%;
         margin: 0 auto;
     }
@@ -625,7 +625,11 @@
         }
         
         /* Registration Form Mobile Styles */
-    
+        .pdf-container {
+            padding: 10px !important;
+            max-width: 100% !important;
+            font-size: 9px !important;
+        }
         
         /* Announcements Mobile Styles */
         .announcements-container {
@@ -1137,125 +1141,105 @@
                     
                     <div class="pdf-container">
                       <!-- Header with Logo -->
-                      <div class="text-center mb-3">
-                        <img src="photo/mseuflogo.png" alt="MSEUF Logo" style="width: 60px; height: 60px; object-fit: contain;">
-                        <h6 class="mb-0 mt-2" style="font-size: 11px; font-weight: bold;">MANUEL S. ENVERGA UNIVERSITY FOUNDATION</h6>
-                        <small style="font-size: 9px;">Candelaria, Quezon</small>
-                        <h6 class="mt-2 mb-3 fw-bold" style="font-size: 12px;">REGISTRATION FORM</h6>
+                      <div class="text-center" style="margin-bottom: 8px;">
+                        <img src="photo/mseuflogo.png" alt="MSEUF Logo" style="width: 45px; height: 45px; object-fit: contain;">
+                        <h6 class="mb-0 mt-1" style="font-size: 9px; font-weight: bold; line-height: 1.1;">MANUEL S. ENVERGA UNIVERSITY FOUNDATION</h6>
+                        <small style="font-size: 7px;">Candelaria, Quezon</small>
+                        <h6 class="mt-1 mb-2 fw-bold" style="font-size: 10px;">REGISTRATION FORM</h6>
                       </div>
 
                       <!-- Photo and Basic Info Section -->
-                      <div class="row mb-3">
+                      <div class="row" style="margin-bottom: 6px;">
                         <div class="col-4 text-center">
-                          <div style="width: 100%; aspect-ratio: 3/4; border: 2px solid #800000; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999;">
+                          <div style="width: 80px; height: 80px; border: 2px solid #800000; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; font-size: 8px; color: #999; margin: 0 auto;">
                             <div>
-                              <i class="fas fa-user" style="font-size: 30px; display: block; margin-bottom: 5px;"></i>
-                              2x2 Photo
+                              <i class="fas fa-user" style="font-size: 20px; display: block; margin-bottom: 2px;"></i>
+                              2x2
                             </div>
                           </div>
-                          <small style="font-size: 9px; display: block; margin-top: 3px;">ID Photo</small>
                         </div>
                         <div class="col-8">
-                          <div style="font-size: 10px; line-height: 1.6;">
-                            <div class="mb-2">
-                              <strong>Student ID:</strong> A22-0001
+                          <div style="font-size: 8px; line-height: 1.3;">
+                            <div style="margin-bottom: 2px;"><strong>ID:</strong> A22-0001</div>
+                            <div style="margin-bottom: 2px;"><strong>Name:</strong> Juan Torres Dela Cruz</div>
+                            <div style="margin-bottom: 2px;"><strong>Course:</strong> BS Info Tech</div>
+                            <div><strong>Year:</strong> 1st Year</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Two Column Layout for All Sections -->
+                      <div class="row" style="margin-bottom: 6px;">
+                        <!-- Left Column -->
+                        <div class="col-6" style="padding-right: 3px;">
+                          <!-- Personal Information -->
+                          <div style="border: 1px solid #ddd; padding: 5px; margin-bottom: 6px; background-color: #fafafa;">
+                            <h6 style="font-size: 8px; font-weight: bold; margin-bottom: 4px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 1px;">PERSONAL INFO</h6>
+                            <div style="font-size: 7px; line-height: 1.4;">
+                              <div><strong>DOB:</strong> Oct 24, 2004</div>
+                              <div><strong>Sex:</strong> Male</div>
+                              <div><strong>Status:</strong> Single</div>
+                              <div><strong>Religion:</strong> Catholic</div>
                             </div>
-                            <div class="mb-2">
-                              <strong>Name:</strong><br>Juan Torres Dela Cruz
+                          </div>
+
+                          <!-- Contact Info -->
+                          <div style="border: 1px solid #ddd; padding: 5px; margin-bottom: 6px; background-color: #fafafa;">
+                            <h6 style="font-size: 8px; font-weight: bold; margin-bottom: 4px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 1px;">CONTACT</h6>
+                            <div style="font-size: 7px; line-height: 1.4;">
+                              <div><strong>Address:</strong> Candelaria, Quezon</div>
+                              <div><strong>Mobile:</strong> 0991 770 0123</div>
+                              <div><strong>Email:</strong> juan@email.com</div>
                             </div>
-                            <div class="mb-2">
-                              <strong>Course:</strong><br>BS Information Technology
+                          </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-6" style="padding-left: 3px;">
+                          <!-- Parent/Guardian -->
+                          <div style="border: 1px solid #ddd; padding: 5px; margin-bottom: 6px; background-color: #fafafa;">
+                            <h6 style="font-size: 8px; font-weight: bold; margin-bottom: 4px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 1px;">PARENT/GUARDIAN</h6>
+                            <div style="font-size: 7px; line-height: 1.4;">
+                              <div><strong>Father:</strong> Jose Dela Cruz</div>
+                              <div>Engineer</div>
+                              <div><strong>Mother:</strong> Maria Dela Cruz</div>
+                              <div>Teacher</div>
                             </div>
-                            <div class="mb-2">
-                              <strong>Year:</strong> 1st Year
+                          </div>
+
+                          <!-- Enrollment -->
+                          <div style="border: 1px solid #ddd; padding: 5px; margin-bottom: 6px; background-color: #fafafa;">
+                            <h6 style="font-size: 8px; font-weight: bold; margin-bottom: 4px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 1px;">ENROLLMENT</h6>
+                            <div style="font-size: 7px; line-height: 1.4;">
+                              <div><strong>Sem:</strong> 1st, AY 2025-26</div>
+                              <div><strong>Date:</strong> June 10, 2025</div>
+                              <div><strong>Status:</strong> Regular</div>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <!-- Personal Information - Compact -->
-                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
-                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">PERSONAL INFORMATION</h6>
-                        <div style="font-size: 9px; line-height: 1.7;">
-                          <div class="row mb-1">
-                            <div class="col-6"><strong>Birth Date:</strong> Oct 24, 2004</div>
-                            <div class="col-6"><strong>Sex:</strong> Male</div>
-                          </div>
-                          <div class="row mb-1">
-                            <div class="col-6"><strong>Civil Status:</strong> Single</div>
-                            <div class="col-6"><strong>Religion:</strong> Catholic</div>
-                          </div>
-                          <div class="mb-1">
-                            <strong>Address:</strong> Candelaria, Quezon
-                          </div>
-                          <div class="row mb-1">
-                            <div class="col-6"><strong>Contact:</strong> 0991 770 0123</div>
-                            <div class="col-6"><strong>Email:</strong> juan@email.com</div>
-                          </div>
+                      <!-- Educational Background - Full Width -->
+                      <div style="border: 1px solid #ddd; padding: 5px; margin-bottom: 6px; background-color: #fafafa;">
+                        <h6 style="font-size: 8px; font-weight: bold; margin-bottom: 4px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 1px;">EDUCATIONAL BACKGROUND</h6>
+                        <div style="font-size: 7px; line-height: 1.4;">
+                          <div><strong>Elem:</strong> Candelaria ES (2016) | <strong>HS:</strong> Tayabas Western (2020) | <strong>SHS:</strong> Quezon Science (2022)</div>
                         </div>
                       </div>
 
-                      <!-- Parent/Guardian Info - Compact -->
-                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
-                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">PARENT/GUARDIAN</h6>
-                        <div style="font-size: 9px; line-height: 1.7;">
-                          <div class="mb-1">
-                            <strong>Father:</strong> Jose Dela Cruz - Engineer
-                          </div>
-                          <div class="mb-1">
-                            <strong>Mother:</strong> Maria Dela Cruz - Teacher
-                          </div>
-                          <div class="mb-1">
-                            <strong>Contact:</strong> 0917 123 4567
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Educational Background - Compact -->
-                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
-                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">EDUCATIONAL BACKGROUND</h6>
-                        <div style="font-size: 9px; line-height: 1.6;">
-                          <div class="mb-1">
-                            <strong>Elementary:</strong> Candelaria ES (2016)
-                          </div>
-                          <div class="mb-1">
-                            <strong>High School:</strong> Tayabas Western Academy (2020)
-                          </div>
-                          <div class="mb-1">
-                            <strong>Senior High:</strong> Quezon Science HS (2022)
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Enrollment Info -->
-                      <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; background-color: #fafafa;">
-                        <h6 style="font-size: 10px; font-weight: bold; margin-bottom: 8px; color: #800000; border-bottom: 1px solid #800000; padding-bottom: 3px;">ENROLLMENT DETAILS</h6>
-                        <div style="font-size: 9px; line-height: 1.7;">
-                          <div class="mb-1">
-                            <strong>Semester:</strong> 1st Sem, AY 2025-2026
-                          </div>
-                          <div class="mb-1">
-                            <strong>Date Enrolled:</strong> June 10, 2025
-                          </div>
-                          <div class="mb-1">
-                            <strong>Status:</strong> Regular Student
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Signatures - Compact -->
-                      <div style="margin-top: 20px; font-size: 9px;">
+                      <!-- Signatures -->
+                      <div style="margin-top: 8px; font-size: 7px;">
                         <div class="row">
                           <div class="col-6 text-center">
-                            <div style="border-bottom: 1px solid #000; margin: 0 10px 3px 10px; height: 30px;"></div>
+                            <div style="border-bottom: 1px solid #000; margin: 0 5px 2px 5px; height: 20px;"></div>
                             <div>Student Signature</div>
                           </div>
                           <div class="col-6 text-center">
-                            <div style="border-bottom: 1px solid #000; margin: 0 10px 3px 10px; height: 30px;"></div>
+                            <div style="border-bottom: 1px solid #000; margin: 0 5px 2px 5px; height: 20px;"></div>
                             <div>Parent/Guardian</div>
                           </div>
                         </div>
-                        <div class="text-center mt-3" style="font-size: 8px; color: #666;">
+                        <div class="text-center mt-2" style="font-size: 6px; color: #666;">
                           Date Issued: October 12, 2025
                         </div>
                       </div>
