@@ -354,26 +354,19 @@
         right: 20px;
         border-radius: 50px;
         padding: 12px 25px;
-        background-color: white;
+        background-color: #800000; /* maroon background */
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         display: flex;
         align-items: center;
         font-weight: 600;
         border: 2px solid #800000; /* maroon border */
-        transition: 0.3s;
-        color: #800000; /* text maroon */
+        color: white; /* white text */
+        cursor: pointer;
     }
     .download-btn i {
         margin-left: 8px;
-        color: #800000; /* maroon icon */
+        color: white; /* white icon */
         font-size: 18px;
-    }
-    .download-btn:hover {
-        background-color: #800000;
-        color: #fff;
-    }
-    .download-btn:hover i {
-        color: #fff;
     }
     
     /* Mobile sidebar toggle */
@@ -726,7 +719,7 @@
                             <div class="card h-100 text-center stat-card">
                                 <div class="card-body">
                                     <i class="fas fa-star fa-2x text-maroon mb-2"></i>
-                                    <h6 class="fw-bold text-maroon">GPA</h6>
+                                    <h6 class="fw-bold text-maroon">GWA</h6>
                                     <h2 class="text-dark">1.00</h2>
                                 </div>
                             </div>
@@ -752,20 +745,22 @@
                     <div class="row mb-3">
                       <div class="col-md-4">
                         <label>Filter by Year</label>
-                        <select class="form-select">
-                          <option>2024 - 2025</option>
-                          <option>2023 - 2024</option>
+                        <select class="form-select" id="yearFilter">
+                          <option value="">All Years</option>
+                          <option value="2024-2025">2024 - 2025</option>
+                          <option value="2023-2024">2023 - 2024</option>
                         </select>
                       </div>
                       <div class="col-md-4">
                         <label>Filter by Semester</label>
-                        <select class="form-select">
-                          <option>1ST SEMESTER</option>
-                          <option>2ND SEMESTER</option>
+                        <select class="form-select" id="semesterFilter">
+                          <option value="">All Semesters</option>
+                          <option value="1ST SEMESTER">1ST SEMESTER</option>
+                          <option value="2ND SEMESTER">2ND SEMESTER</option>
                         </select>
                       </div>
                       <div class="col-md-4 d-flex align-items-end">
-                        <button class="btn btn-reset w-100">Reset Filter</button>
+                        <button class="btn btn-reset w-100" id="resetGradesFilter">Reset Filter</button>
                       </div>
                     </div>
 
@@ -778,53 +773,165 @@
                             <th>Subject</th>
                             <th>Midterm Grade</th>
                             <th>Final Grade</th>
-                            <th>GPA</th>
                             <th>Remarks</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
+                        <tbody id="gradesTableBody">
+                          <!-- 2024-2025, 1ST SEMESTER -->
+                          <tr data-year="2024-2025" data-semester="1ST SEMESTER">
                             <td class="text-danger">PCS112</td>
                             <td>Programming Lang.</td>
-                            <td>99</td>
-                            <td>99</td>
-                            <td>1.00</td>
+                            <td>95</td>
+                            <td>1.25</td>
                             <td>Passed</td>
                           </tr>
-                          <tr>
+                          <tr data-year="2024-2025" data-semester="1ST SEMESTER">
                             <td class="text-danger">SCS101</td>
                             <td>Software Testing</td>
-                            <td>99</td>
-                            <td>99</td>
-                            <td>1.00</td>
+                            <td>92</td>
+                            <td>1.50</td>
                             <td>Passed</td>
                           </tr>
-                          <tr>
+                          <tr data-year="2024-2025" data-semester="1ST SEMESTER">
                             <td class="text-danger">PCS115</td>
                             <td>CS Thesis Writing</td>
-                            <td>99</td>
-                            <td>99</td>
+                            <td>98</td>
                             <td>1.00</td>
                             <td>Passed</td>
                           </tr>
-                          <tr>
+                          <tr data-year="2024-2025" data-semester="1ST SEMESTER">
+                            <td class="text-danger">ITE101</td>
+                            <td>Database Systems</td>
+                            <td>90</td>
+                            <td>1.75</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2024-2025" data-semester="1ST SEMESTER">
+                            <td class="text-danger">NET102</td>
+                            <td>Network Security</td>
+                            <td>94</td>
+                            <td>1.25</td>
+                            <td>Passed</td>
+                          </tr>
+                          
+                          <!-- 2024-2025, 2ND SEMESTER -->
+                          <tr data-year="2024-2025" data-semester="2ND SEMESTER">
                             <td class="text-danger">PCS110</td>
                             <td>Software Eng.</td>
-                            <td>99</td>
-                            <td>99</td>
+                            <td>96</td>
                             <td>1.00</td>
                             <td>Passed</td>
                           </tr>
-                          <tr>
+                          <tr data-year="2024-2025" data-semester="2ND SEMESTER">
+                            <td class="text-danger">WEB201</td>
+                            <td>Web Development</td>
+                            <td>93</td>
+                            <td>1.50</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2024-2025" data-semester="2ND SEMESTER">
+                            <td class="text-danger">MOB101</td>
+                            <td>Mobile Programming</td>
+                            <td>91</td>
+                            <td>1.75</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2024-2025" data-semester="2ND SEMESTER">
+                            <td class="text-danger">SYS202</td>
+                            <td>System Analysis</td>
+                            <td>89</td>
+                            <td>1.75</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2024-2025" data-semester="2ND SEMESTER">
+                            <td class="text-danger">AI301</td>
+                            <td>Artificial Intelligence</td>
+                            <td>97</td>
+                            <td>1.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          
+                          <!-- 2023-2024, 1ST SEMESTER -->
+                          <tr data-year="2023-2024" data-semester="1ST SEMESTER">
+                            <td class="text-danger">DSA201</td>
+                            <td>Data Structures</td>
+                            <td>88</td>
+                            <td>2.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="1ST SEMESTER">
+                            <td class="text-danger">ALG102</td>
+                            <td>Algorithm Analysis</td>
+                            <td>92</td>
+                            <td>1.50</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="1ST SEMESTER">
+                            <td class="text-danger">OOP201</td>
+                            <td>Object-Oriented Prog.</td>
+                            <td>95</td>
+                            <td>1.25</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="1ST SEMESTER">
+                            <td class="text-danger">DIS101</td>
+                            <td>Discrete Mathematics</td>
+                            <td>87</td>
+                            <td>2.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="1ST SEMESTER">
+                            <td class="text-danger">ENG102</td>
+                            <td>Technical Writing</td>
+                            <td>90</td>
+                            <td>1.75</td>
+                            <td>Passed</td>
+                          </tr>
+                          
+                          <!-- 2023-2024, 2ND SEMESTER -->
+                          <tr data-year="2023-2024" data-semester="2ND SEMESTER">
                             <td class="text-danger">PCS114</td>
                             <td>Research Methods</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>5.00</td>
-                            <td>Incomplete</td>
+                            <td>85</td>
+                            <td>2.25</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="2ND SEMESTER">
+                            <td class="text-danger">OS201</td>
+                            <td>Operating Systems</td>
+                            <td>89</td>
+                            <td>1.75</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="2ND SEMESTER">
+                            <td class="text-danger">COM301</td>
+                            <td>Computer Architecture</td>
+                            <td>91</td>
+                            <td>1.75</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="2ND SEMESTER">
+                            <td class="text-danger">NET201</td>
+                            <td>Computer Networks</td>
+                            <td>93</td>
+                            <td>1.50</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr data-year="2023-2024" data-semester="2ND SEMESTER">
+                            <td class="text-danger">ETH101</td>
+                            <td>IT Ethics</td>
+                            <td>96</td>
+                            <td>1.00</td>
+                            <td>Passed</td>
                           </tr>
                         </tbody>
                       </table>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div id="noGradesMessage" class="text-center py-4" style="display: none;">
+                      <i class="fas fa-chart-line fa-3x text-muted mb-3"></i>
+                      <p class="text-muted">No grades found matching your filter criteria.</p>
                     </div>
 
                   </div>
@@ -1353,10 +1460,6 @@
                                     </tbody>
                                 </table>
                             </div>
-                            
-                            <div class="mt-4">
-                                <button class="btn btn-outline-primary">Print Assessment</button>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1678,6 +1781,62 @@
     
         // Make function globally available
         window.togglePassword = togglePassword;
+
+        // Grades Filter Functionality
+        const yearFilter = document.getElementById('yearFilter');
+        const semesterFilter = document.getElementById('semesterFilter');
+        const resetGradesFilter = document.getElementById('resetGradesFilter');
+        const gradesTableBody = document.getElementById('gradesTableBody');
+        const noGradesMessage = document.getElementById('noGradesMessage');
+
+        // Filter grades function
+        function filterGrades() {
+            const selectedYear = yearFilter.value;
+            const selectedSemester = semesterFilter.value;
+            const gradeRows = gradesTableBody.querySelectorAll('tr');
+            let visibleCount = 0;
+
+            gradeRows.forEach(row => {
+                const rowYear = row.getAttribute('data-year');
+                const rowSemester = row.getAttribute('data-semester');
+                
+                const matchesYear = !selectedYear || rowYear === selectedYear;
+                const matchesSemester = !selectedSemester || rowSemester === selectedSemester;
+
+                if (matchesYear && matchesSemester) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message and table
+            if (visibleCount === 0) {
+                noGradesMessage.style.display = 'block';
+                document.querySelector('#grades-content .table-responsive').style.display = 'none';
+            } else {
+                noGradesMessage.style.display = 'none';
+                document.querySelector('#grades-content .table-responsive').style.display = 'block';
+            }
+        }
+
+        // Event listeners for grades filters
+        if (yearFilter) {
+            yearFilter.addEventListener('change', filterGrades);
+        }
+
+        if (semesterFilter) {
+            semesterFilter.addEventListener('change', filterGrades);
+        }
+
+        if (resetGradesFilter) {
+            resetGradesFilter.addEventListener('click', function() {
+                yearFilter.value = '';
+                semesterFilter.value = '';
+                filterGrades();
+            });
+        }
     </script>
 </body>
 </html>
