@@ -191,10 +191,6 @@
         background-color: var(--maroon);
         color: white;
     }
-    .table-responsive {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
     
     /* Button styles */
     .btn-reset {
@@ -208,248 +204,32 @@
     }
     
     /* Registration Form Styles */
-    .registration-wrapper {
-        height: calc(100vh - 160px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        background-color: #f5f5f5;
-        overflow: hidden;
-    }
-    
-    .registration-card {
+    .pdf-container {
         background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        max-width: 850px;
+        padding: 40px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        font-size: 14px;
+        max-width: 800px;   /* A4-like width */
         width: 100%;
-        max-height: 100%;
-        padding: 25px 30px;
         margin: 0 auto;
-        overflow-y: auto;
-        overflow-x: hidden;
     }
-    
-    .registration-card::-webkit-scrollbar {
-        width: 6px;
-    }
-    
-    .registration-card::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-    
-    .registration-card::-webkit-scrollbar-thumb {
-        background: #800000;
-        border-radius: 10px;
-    }
-    
-    .registration-card::-webkit-scrollbar-thumb:hover {
-        background: #a52a2a;
-    }
-    
-    .registration-header {
-        text-align: center;
-        margin-bottom: 15px;
-        padding-bottom: 12px;
-        border-bottom: 2px solid #800000;
-    }
-    
-    .registration-header .university-logo {
-        width: 50px;
-        height: 50px;
-        margin: 0 auto 8px;
-        background-color: white;
-        border-radius: 50%;
-        padding: 3px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .registration-header .university-logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-    
-    .registration-header h5 {
-        font-size: 13px;
+    .section-title {
         font-weight: bold;
-        margin-bottom: 3px;
-        color: #333;
-        line-height: 1.2;
-    }
-    
-    .registration-header small {
-        font-size: 9px;
-        color: #666;
-        display: block;
-    }
-    
-    .registration-header h6 {
-        font-size: 11px;
-        font-weight: bold;
-        margin-top: 6px;
-        margin-bottom: 0;
-        color: #800000;
-    }
-    
-    .registration-body {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .student-id-section {
-        display: flex;
-        gap: 15px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #e0e0e0;
-        align-items: flex-start;
-    }
-    
-    .student-photo {
-        width: 90px;
-        height: 105px;
-        border: 2px solid #800000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f9f9f9;
-        flex-shrink: 0;
-    }
-    
-    .student-photo i {
-        font-size: 36px;
-        color: #ccc;
-    }
-    
-    .student-photo small {
-        display: block;
-        text-align: center;
-        color: #999;
-        font-size: 8px;
-        margin-top: 3px;
-    }
-    
-    .student-basic-info {
-        flex: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        font-size: 10px;
-    }
-    
-    .info-field {
-        font-size: 10px;
-        line-height: 1.3;
-    }
-    
-    .info-field strong {
-        display: block;
-        color: #800000;
-        font-weight: 600;
-        margin-bottom: 1px;
-        font-size: 9px;
-    }
-    
-    .info-field span {
-        color: #333;
-    }
-    
-    .form-sections {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin-top: 12px;
-    }
-    
-    .form-section {
-        border: 1px solid #e0e0e0;
-        padding: 10px;
-        border-radius: 4px;
-    }
-    
-    .form-section h6 {
-        font-size: 10px;
-        font-weight: bold;
+        text-align: left;
+        margin: 25px 0 10px;
         text-transform: uppercase;
-        color: #800000;
-        margin-bottom: 8px;
+        border-bottom: 1px solid #ccc;
         padding-bottom: 4px;
-        border-bottom: 1px solid #800000;
     }
-    
-    .form-section .info-field {
-        margin-bottom: 6px;
-    }
-    
-    .full-width-section {
-        grid-column: 1 / -1;
-    }
-    
-    .education-grid {
-        font-size: 9px;
-        margin-top: 6px;
-    }
-    
-    .education-item {
-        display: flex;
-        gap: 6px;
-        margin-bottom: 3px;
-        padding-bottom: 3px;
-        flex-wrap: wrap;
-    }
-    
-    .education-item strong {
-        color: #800000;
-        white-space: nowrap;
-    }
-    
-    .education-item span {
-        font-size: 9px;
-    }
-    
-    .signature-section {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 15px;
-        padding-top: 12px;
-        border-top: 1px solid #e0e0e0;
-    }
-    
-    .signature-box {
-        text-align: center;
-        flex: 1;
-    }
-    
     .signature-line {
         display: inline-block;
-        border-bottom: 1px solid #333;
-        width: 150px;
-        margin-bottom: 3px;
-        height: 30px;
+        border-bottom: 1px solid #000;
+        width: 250px;
+        margin-top: 40px;
     }
-    
-    .signature-box p {
-        font-size: 9px;
-        color: #666;
-        margin: 0;
-    }
-    
-    .signature-box small {
-        font-size: 8px;
-        color: #999;
-    }
-    
-    .date-issued {
-        text-align: center;
-        font-size: 9px;
-        color: #666;
-        margin-top: 8px;
-        margin-bottom: 0;
+    .form-table td {
+        padding: 6px 10px;
+        vertical-align: top;
     }
     
     /* Announcements Styles */
@@ -568,36 +348,32 @@
     }
     
     /* Download Button */
-    .download-btn-container {
+    .download-btn {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        z-index: 100;
-    }
-    
-    .download-btn {
         border-radius: 50px;
-        padding: 10px 20px;
+        padding: 12px 25px;
         background-color: white;
-        box-shadow: 0 2px 8px rgba(128, 0, 0, 0.3);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         display: flex;
         align-items: center;
-        gap: 8px;
         font-weight: 600;
-        border: 2px solid #800000;
+        border: 2px solid #800000; /* maroon border */
         transition: 0.3s;
-        color: #800000;
-        cursor: pointer;
-        font-size: 12px;
+        color: #800000; /* text maroon */
     }
     .download-btn i {
-        font-size: 14px;
+        margin-left: 8px;
+        color: #800000; /* maroon icon */
+        font-size: 18px;
     }
     .download-btn:hover {
         background-color: #800000;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(128, 0, 0, 0.4);
+        color: #fff;
+    }
+    .download-btn:hover i {
+        color: #fff;
     }
     
     /* Mobile sidebar toggle */
@@ -840,179 +616,12 @@
             margin-top: 15px;
         }
         
-        /* Grades Table Mobile Styles */
-        .dashboard-card {
-            padding: 15px;
-            overflow-x: hidden;
-        }
-        
-        .table-responsive {
-            margin: 0 -15px;
-            padding: 0 15px;
-        }
-        
-        .table {
-            font-size: 12px;
-            min-width: 100%;
-        }
-        
-        .table th,
-        .table td {
-            padding: 8px 4px;
-            font-size: 11px;
-            white-space: nowrap;
-        }
-        
-        .grades-title {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        .row.mb-3 {
-            margin-bottom: 15px !important;
-        }
-        
-        .col-md-4 {
-            margin-bottom: 10px;
-        }
-        
-        .col-md-4 label {
-            font-size: 13px;
-            margin-bottom: 5px;
-        }
-        
-        .form-select {
-            font-size: 13px;
-            padding: 6px 10px;
-        }
-        
-        .btn-reset {
-            font-size: 13px;
-            padding: 6px 12px;
-        }
-        
         /* Registration Form Mobile Styles */
-        .registration-wrapper {
-            height: calc(100vh - 140px);
-            padding: 10px;
+        .pdf-container {
+            padding: 20px;
         }
-        
-        .registration-card {
-            padding: 15px;
-            font-size: 9px;
-        }
-        
-        .registration-header .university-logo {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 5px;
-        }
-        
-        .registration-header h5 {
-            font-size: 11px;
-        }
-        
-        .registration-header small {
-            font-size: 8px;
-        }
-        
-        .registration-header h6 {
-            font-size: 10px;
-            margin-top: 4px;
-        }
-        
-        .student-id-section {
-            gap: 10px;
-            padding-bottom: 10px;
-        }
-        
-        .student-photo {
-            width: 70px;
-            height: 85px;
-        }
-        
-        .student-photo i {
-            font-size: 28px;
-        }
-        
-        .student-basic-info {
-            grid-template-columns: 1fr;
-            gap: 5px;
-            font-size: 9px;
-        }
-        
-        .info-field {
-            font-size: 9px;
-        }
-        
-        .info-field strong {
-            font-size: 8px;
-        }
-        
-        .form-sections {
-            grid-template-columns: 1fr;
-            gap: 8px;
-            margin-top: 8px;
-        }
-        
-        .form-section {
-            padding: 8px;
-        }
-        
-        .form-section h6 {
-            font-size: 9px;
-            margin-bottom: 6px;
-            padding-bottom: 3px;
-        }
-        
-        .form-section .info-field {
-            margin-bottom: 4px;
-        }
-        
-        .education-grid {
-            font-size: 8px;
-        }
-        
-        .education-item {
-            gap: 4px;
-        }
-        
-        .education-item span {
-            font-size: 8px;
-        }
-        
-        .signature-section {
-            margin-top: 10px;
-            padding-top: 8px;
-            gap: 15px;
-        }
-        
         .signature-line {
-            width: 100px;
-            height: 25px;
-        }
-        
-        .signature-box p {
-            font-size: 8px;
-        }
-        
-        .date-issued {
-            font-size: 8px;
-            margin-top: 6px;
-        }
-        
-        .download-btn-container {
-            bottom: 10px;
-            right: 10px;
-        }
-        
-        .download-btn {
-            padding: 8px 15px;
-            font-size: 10px;
-        }
-        
-        .download-btn i {
-            font-size: 12px;
+            width: 150px;
         }
         
         /* Announcements Mobile Styles */
@@ -1143,23 +752,20 @@
                     <div class="row mb-3">
                       <div class="col-md-4">
                         <label>Filter by Year</label>
-                        <select class="form-select" id="yearFilter">
-                          <option value="">All Years</option>
-                          <option value="2024-2025">2024 - 2025</option>
-                          <option value="2023-2024">2023 - 2024</option>
-                          <option value="2022-2023">2022 - 2023</option>
+                        <select class="form-select">
+                          <option>2024 - 2025</option>
+                          <option>2023 - 2024</option>
                         </select>
                       </div>
                       <div class="col-md-4">
                         <label>Filter by Semester</label>
-                        <select class="form-select" id="semesterFilter">
-                          <option value="">All Semesters</option>
-                          <option value="1ST SEMESTER">1ST SEMESTER</option>
-                          <option value="2ND SEMESTER">2ND SEMESTER</option>
+                        <select class="form-select">
+                          <option>1ST SEMESTER</option>
+                          <option>2ND SEMESTER</option>
                         </select>
                       </div>
                       <div class="col-md-4 d-flex align-items-end">
-                        <button class="btn btn-reset w-100" id="resetGradesFilter">Reset Filter</button>
+                        <button class="btn btn-reset w-100">Reset Filter</button>
                       </div>
                     </div>
 
@@ -1172,19 +778,53 @@
                             <th>Subject</th>
                             <th>Midterm Grade</th>
                             <th>Final Grade</th>
+                            <th>GPA</th>
                             <th>Remarks</th>
                           </tr>
                         </thead>
-                        <tbody id="gradesTableBody">
-                          <!-- Grades will be populated by JavaScript -->
+                        <tbody>
+                          <tr>
+                            <td class="text-danger">PCS112</td>
+                            <td>Programming Lang.</td>
+                            <td>99</td>
+                            <td>99</td>
+                            <td>1.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr>
+                            <td class="text-danger">SCS101</td>
+                            <td>Software Testing</td>
+                            <td>99</td>
+                            <td>99</td>
+                            <td>1.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr>
+                            <td class="text-danger">PCS115</td>
+                            <td>CS Thesis Writing</td>
+                            <td>99</td>
+                            <td>99</td>
+                            <td>1.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr>
+                            <td class="text-danger">PCS110</td>
+                            <td>Software Eng.</td>
+                            <td>99</td>
+                            <td>99</td>
+                            <td>1.00</td>
+                            <td>Passed</td>
+                          </tr>
+                          <tr>
+                            <td class="text-danger">PCS114</td>
+                            <td>Research Methods</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>5.00</td>
+                            <td>Incomplete</td>
+                          </tr>
                         </tbody>
                       </table>
-                    </div>
-
-                    <!-- No results message -->
-                    <div id="noGradesMessage" class="text-center py-4" style="display: none;">
-                      <i class="fas fa-search fa-3x text-muted mb-3"></i>
-                      <p class="text-muted">No grades found matching your filters.</p>
                     </div>
 
                   </div>
@@ -1490,164 +1130,108 @@
 
                 <!-- Registration Form Content -->
                 <div id="registration-content" class="content">
-                    <h2 class="grades-title" style="padding: 20px 20px 0 20px; margin-bottom: 0;"><i class="fas fa-file-alt"></i> Registration Form</h2>
-                    <div class="registration-wrapper">
-                        <div class="registration-card">
-                            <!-- Header -->
-                            <div class="registration-header">
-                                <div class="university-logo">
-                                    <img src="photo/mseuflogo.png" alt="MSEUF Logo">
-                                </div>
-                                <h5>MANUEL S. ENVERGA UNIVERSITY FOUNDATION</h5>
-                                <small>Candelaria, Quezon</small>
-                                <h6>REGISTRATION FORM</h6>
-                            </div>
+                    <h2 class="grades-title"><i class="fas fa-file-alt"></i> Registration Form</h2>
+                    
+                    <div class="pdf-container">
+                      <!-- Header -->
+                      <div class="text-center">
+                        <h5 class="mb-0">MANUEL S. ENVERGA UNIVERSITY FOUNDATION</h5>
+                        <small>Candelaria, Quezon <br> Tel: (042) 710-3188 | registrar@mseuf.edu.ph</small>
+                        <h6 class="mt-3 mb-4 fw-bold">STUDENT REGISTRATION FORM</h6>
+                      </div>
 
-                            <!-- Student ID and Photo Section -->
-                            <div class="student-id-section">
-                                <div class="student-photo">
-                                    <div>
-                                        <i class="fas fa-user" style="font-size: 48px; color: #ccc;"></i>
-                                        <small style="display: block; margin-top: 5px;">2x2</small>
-                                    </div>
-                                </div>
-                                <div class="student-basic-info">
-                                    <div class="info-field">
-                                        <strong>ID:</strong>
-                                        <span>A22-0001</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Course:</strong>
-                                        <span>BS Info Tech</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Name:</strong>
-                                        <span>Juan Torres Dela Cruz</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Year:</strong>
-                                        <span>1st Year</span>
-                                    </div>
-                                </div>
-                            </div>
+                      <!-- Student Information -->
+                      <h6 class="section-title">Personal Information</h6>
+                      <table class="table table-bordered form-table">
+                        <tbody>
+                          <tr><td><strong>Full Name:</strong></td><td>Juan Torres Dela Cruz</td></tr>
+                          <tr><td><strong>Date of Birth:</strong></td><td>October 24, 2004</td></tr>
+                          <tr><td><strong>Sex:</strong></td><td>Male</td></tr>
+                          <tr><td><strong>Citizenship:</strong></td><td>Filipino</td></tr>
+                          <tr><td><strong>Religion:</strong></td><td>Roman Catholic</td></tr>
+                          <tr><td><strong>Permanent Address:</strong></td><td>Candelaria, Quezon</td></tr>
+                          <tr><td><strong>Contact No.:</strong></td><td>0991 770 0123</td></tr>
+                          <tr><td><strong>Email:</strong></td><td>juandirection@gmail.com</td></tr>
+                        </tbody>
+                      </table>
 
-                            <!-- Form Sections -->
-                            <div class="form-sections">
-                                <!-- Personal Info -->
-                                <div class="form-section">
-                                    <h6>Personal Info</h6>
-                                    <div class="info-field">
-                                        <strong>DOB:</strong>
-                                        <span>Oct 24, 2004</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Sex:</strong>
-                                        <span>Male</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Status:</strong>
-                                        <span>Single</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Religion:</strong>
-                                        <span>Catholic</span>
-                                    </div>
-                                </div>
+                      <!-- Parent Information -->
+                      <h6 class="section-title">Parent / Guardian Information</h6>
+                      <table class="table table-bordered form-table">
+                        <tbody>
+                          <tr><td><strong>Father's Name:</strong></td><td>Jose Dela Cruz</td></tr>
+                          <tr><td><strong>Occupation:</strong></td><td>Engineer</td></tr>
+                          <tr><td><strong>Mother's Name:</strong></td><td>Maria Dela Cruz</td></tr>
+                          <tr><td><strong>Occupation:</strong></td><td>Teacher</td></tr>
+                          <tr><td><strong>Guardian (if not parents):</strong></td><td>—</td></tr>
+                        </tbody>
+                      </table>
 
-                                <!-- Parent/Guardian -->
-                                <div class="form-section">
-                                    <h6>Parent/Guardian</h6>
-                                    <div class="info-field">
-                                        <strong>Father:</strong>
-                                        <span>Jose Dela Cruz</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Engineer</strong>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Mother:</strong>
-                                        <span>Maria Dela Cruz</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Teacher</strong>
-                                    </div>
-                                </div>
+                      <!-- Educational Background -->
+                      <h6 class="section-title">Educational Background</h6>
+                      <table class="table table-bordered form-table">
+                        <thead class="table-light">
+                          <tr>
+                            <th>Level</th>
+                            <th>School</th>
+                            <th>Location</th>
+                            <th>Year Graduated</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Elementary</td>
+                            <td>Candelaria Elementary School</td>
+                            <td>Candelaria, Quezon</td>
+                            <td>2016</td>
+                          </tr>
+                          <tr>
+                            <td>High School</td>
+                            <td>Tayabas Western Academy</td>
+                            <td>Tayabas, Quezon</td>
+                            <td>2020</td>
+                          </tr>
+                          <tr>
+                            <td>Senior High</td>
+                            <td>Quezon Science High School</td>
+                            <td>Lucena, Quezon</td>
+                            <td>2022</td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                                <!-- Contact -->
-                                <div class="form-section">
-                                    <h6>Contact</h6>
-                                    <div class="info-field">
-                                        <strong>Address:</strong>
-                                        <span>Candelaria, Quezon</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Mobile:</strong>
-                                        <span>0991 770 0123</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Email:</strong>
-                                        <span>juan@email.com</span>
-                                    </div>
-                                </div>
+                      <!-- Course -->
+                      <h6 class="section-title">Enrollment Information</h6>
+                      <table class="table table-bordered form-table">
+                        <tbody>
+                          <tr><td><strong>Course to Enroll:</strong></td><td>Bachelor of Science in Information Technology</td></tr>
+                          <tr><td><strong>Year Level:</strong></td><td>1st Year</td></tr>
+                          <tr><td><strong>Semester:</strong></td><td>First Semester AY 2025–2026</td></tr>
+                        </tbody>
+                      </table>
 
-                                <!-- Enrollment -->
-                                <div class="form-section">
-                                    <h6>Enrollment</h6>
-                                    <div class="info-field">
-                                        <strong>Term:</strong>
-                                        <span>SY 2025-2026</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Date:</strong>
-                                        <span>June 10, 2025</span>
-                                    </div>
-                                    <div class="info-field">
-                                        <strong>Status:</strong>
-                                        <span>Regular</span>
-                                    </div>
-                                </div>
+                      <!-- Consent -->
+                      <h6 class="section-title">Consent and Declaration</h6>
+                      <p>
+                        I hereby certify that the above information is true and correct to the best of my knowledge. I fully understand that any false information given herein shall be sufficient cause for rejection of my application or dismissal from the University.
+                      </p>
 
-                                <!-- Educational Background -->
-                                <div class="form-section full-width-section">
-                                    <h6>Educational Background</h6>
-                                    <div class="education-grid">
-                                        <div class="education-item">
-                                            <strong>Elem:</strong>
-                                            <span>Candelaria ES (2016) | </span>
-                                            <strong>JH:</strong>
-                                            <span>Tayabas Western (2020) | </span>
-                                            <strong>SH:</strong>
-                                            <span>Quezon Science (2022)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Signatures -->
-                            <div class="signature-section">
-                                <div class="signature-box">
-                                    <div class="signature-line"></div>
-                                    <p>Student Signature</p>
-                                </div>
-                                <div class="signature-box">
-                                    <div class="signature-line"></div>
-                                    <p>Parent/Guardian</p>
-                                </div>
-                            </div>
-
-                            <!-- Date Issued -->
-                            <div class="date-issued">
-                                <small>Date Issued: October 12, 2025</small>
-                            </div>
+                      <div class="d-flex justify-content-between mt-5">
+                        <div class="text-center">
+                          <span class="signature-line"></span>
+                          <p>Signature of Student</p>
+                        </div>
+                        <div class="text-center">
+                          <span class="signature-line"></span>
+                          <p>Signature of Parent/Guardian</p>
                         </div>
                     </div>
-
+                    
                     <!-- Download Button -->
-                    <div class="download-btn-container">
-                        <button class="download-btn" id="downloadPdfBtn">
-                            Download PDF <i class="bi bi-cloud-download"></i>
-                        </button>
-                    </div>
+                    <button class="download-btn" id="downloadPdfBtn">
+                      Download PDF <i class="bi bi-cloud-download"></i>
+                    </button>
+                  </div>
                 </div>
 
                 <!-- Profile Content (Hidden by default) -->
@@ -1883,84 +1467,6 @@
     </div>
 
     <script>
-        // Sample grades data with year and semester information
-        const gradesData = [
-            { code: 'PCS112', subject: 'Programming Lang.', midterm: 99, final: 1.00, remarks: 'Passed', year: '2024-2025', semester: '1ST SEMESTER' },
-            { code: 'SCS101', subject: 'Software Testing', midterm: 99, final: 1.00, remarks: 'Passed', year: '2024-2025', semester: '1ST SEMESTER' },
-            { code: 'PCS115', subject: 'CS Thesis Writing', midterm: 99, final: 1.00, remarks: 'Passed', year: '2024-2025', semester: '1ST SEMESTER' },
-            { code: 'PCS110', subject: 'Software Eng.', midterm: 99, final: 1.00, remarks: 'Passed', year: '2024-2025', semester: '1ST SEMESTER' },
-            { code: 'PCS114', subject: 'Research Methods', midterm: 0, final: 5.00, remarks: 'Incomplete', year: '2024-2025', semester: '1ST SEMESTER' },
-            { code: 'PCS108', subject: 'Data Structures', midterm: 95, final: 1.25, remarks: 'Passed', year: '2023-2024', semester: '2ND SEMESTER' },
-            { code: 'PCS109', subject: 'Web Development', midterm: 92, final: 1.50, remarks: 'Passed', year: '2023-2024', semester: '2ND SEMESTER' },
-            { code: 'PCS107', subject: 'Database Systems', midterm: 90, final: 1.75, remarks: 'Passed', year: '2023-2024', semester: '1ST SEMESTER' },
-            { code: 'PCS106', subject: 'Object-Oriented Prog.', midterm: 88, final: 2.00, remarks: 'Passed', year: '2023-2024', semester: '1ST SEMESTER' },
-            { code: 'PCS105', subject: 'Discrete Mathematics', midterm: 85, final: 2.25, remarks: 'Passed', year: '2022-2023', semester: '2ND SEMESTER' }
-        ];
-
-        // Function to populate grades table
-        function populateGradesTable(data) {
-            const tbody = document.getElementById('gradesTableBody');
-            const noGradesMessage = document.getElementById('noGradesMessage');
-            
-            tbody.innerHTML = '';
-            
-            if (data.length === 0) {
-                tbody.parentElement.parentElement.style.display = 'none';
-                noGradesMessage.style.display = 'block';
-                return;
-            }
-            
-            tbody.parentElement.parentElement.style.display = 'table';
-            noGradesMessage.style.display = 'none';
-            
-            data.forEach(grade => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td class="text-danger">${grade.code}</td>
-                    <td>${grade.subject}</td>
-                    <td>${grade.midterm}</td>
-                    <td>${grade.final.toFixed(2)}</td>
-                    <td>${grade.remarks}</td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
-
-        // Function to filter grades
-        function filterGrades() {
-            const yearFilter = document.getElementById('yearFilter').value;
-            const semesterFilter = document.getElementById('semesterFilter').value;
-            
-            let filteredData = gradesData;
-            
-            if (yearFilter) {
-                filteredData = filteredData.filter(grade => grade.year === yearFilter);
-            }
-            
-            if (semesterFilter) {
-                filteredData = filteredData.filter(grade => grade.semester === semesterFilter);
-            }
-            
-            populateGradesTable(filteredData);
-        }
-
-        // Function to reset grades filter
-        function resetGradesFilter() {
-            document.getElementById('yearFilter').value = '';
-            document.getElementById('semesterFilter').value = '';
-            populateGradesTable(gradesData);
-        }
-
-        // Initialize grades table on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            populateGradesTable(gradesData);
-            
-            // Add event listeners for filters
-            document.getElementById('yearFilter').addEventListener('change', filterGrades);
-            document.getElementById('semesterFilter').addEventListener('change', filterGrades);
-            document.getElementById('resetGradesFilter').addEventListener('click', resetGradesFilter);
-        });
-
         // Mobile sidebar toggle - matches admin behavior
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('active');
@@ -1992,6 +1498,13 @@
                 $('#' + target).addClass('active');
                 $('.nav-link').removeClass('active');
                 $(this).addClass('active');
+                
+                // Hide download button when not in registration form
+                if (target !== 'registration-content') {
+                    $('#downloadPdfBtn').hide();
+                } else {
+                    $('#downloadPdfBtn').show();
+                }
             }
         });
 
@@ -2041,7 +1554,7 @@
             }
         }
 
-        // Password Toggle Function
+                // Password Toggle Function
         function togglePassword(inputId) {
             const input = document.getElementById(inputId);
             const icon = document.getElementById(inputId + '-icon');
@@ -2089,6 +1602,9 @@
             // In a real application, this would trigger a PDF download
             // window.print(); could be used as a fallback
         });
+        
+        // Initially hide the download button
+        $('#downloadPdfBtn').hide();
 
         // Announcements functionality
         const categoryFilter = document.getElementById('categoryFilter');
