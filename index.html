@@ -639,8 +639,166 @@
         #viewAnnouncementModal .modal-body {
             padding: 15px;
         }
+        
+        /* Grades Table Mobile Adjustments */
+        #gradesTable {
+            font-size: 0.75rem;
+            min-width: 100%;
+        }
+        
+        #gradesTable thead th {
+            font-size: 0.65rem;
+            padding: 8px 4px;
+            letter-spacing: 0.2px;
+        }
+        
+        #gradesTable tbody td {
+            font-size: 0.75rem;
+            padding: 8px 4px;
+        }
+        
+        /* Make filter labels and selects smaller on mobile */
+        .form-label {
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .form-label i {
+            font-size: 0.8rem;
+        }
+        
+        .form-select {
+            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+        }
+    }
+    
+    /* Filter section styling - match admin panel */
+    .form-label {
+        font-weight: 600;
+        color: #495057;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .form-label i {
+        color: #800000;
+        font-size: 0.85rem;
+    }
+    
+    .form-select {
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        padding: 0.625rem 0.875rem;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+    }
+    
+    .form-select:focus {
+        border-color: #800000;
+        box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.15);
+    }
+    
+    /* Grades table styling */
+    #gradesTable thead th {
+        background: linear-gradient(135deg, #800000 0%, #a52a2a 100%) !important;
+        color: white !important;
+        border-color: #800000 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 12px 10px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        border: none;
+    }
+    
+    #gradesTable thead th:first-child {
+        border-top-left-radius: 10px;
+    }
+    
+    #gradesTable thead th:last-child {
+        border-top-right-radius: 10px;
+    }
+    
+    #gradesTable tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+    
+    #gradesTable tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+    
+    #gradesTable tbody td {
+        padding: 12px 10px;
+        vertical-align: middle;
+        font-size: 0.9rem;
+        border: none;
+    }
+    
+    /* Table wrapper rounded corners */
+    #grades-content .table-responsive {
+        border-radius: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        background: white;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #gradesTable {
+        margin-bottom: 0;
+        border: none;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    
+    #gradesTable thead th,
+    #gradesTable tbody td {
+        border: none;
+    }
+    
+    #gradesTable tbody tr {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    #gradesTable tbody tr:last-child {
+        border-bottom: none;
+    }
+    
+    /* Ensure table fits on mobile */
+    @media (max-width: 768px) {
+        #grades-content .table-responsive {
+            border-radius: 8px;
+        }
+        
+        #gradesTable {
+            width: 100%;
+            min-width: 600px; /* Set minimum width to prevent header overlap */
+        }
+        
+        /* Make table scrollable horizontally if needed */
+        #grades-content .table-responsive {
+            overflow-x: auto;
+        }
+        
+        /* Compact but readable spacing */
+        #gradesTable thead th {
+            padding: 8px 6px;
+            font-size: 0.7rem;
+        }
+        
+        #gradesTable tbody td {
+            padding: 8px 6px;
+            font-size: 0.8rem;
+        }
+    }
+    
+    .bg-maroon {
+        background-color: var(--maroon);
     }
 </style>
+
 
 </head>
 <body>
@@ -742,32 +900,38 @@
                     <h2 class="grades-title"><i class="fas fa-chart-line"></i> My Grades</h2>
 
                     <!-- Filters -->
-                    <div class="row mb-3">
-                      <div class="col-md-4">
-                        <label>Filter by Year</label>
+                    <div class="row mb-3 g-3">
+                      <div class="col-md-4 col-12">
+                        <label class="form-label">
+                          <i class="fas fa-calendar-alt me-1"></i> Filter by Year
+                        </label>
                         <select class="form-select" id="yearFilter">
                           <option value="">All Years</option>
                           <option value="2024-2025">2024 - 2025</option>
                           <option value="2023-2024">2023 - 2024</option>
                         </select>
                       </div>
-                      <div class="col-md-4">
-                        <label>Filter by Semester</label>
+                      <div class="col-md-4 col-12">
+                        <label class="form-label">
+                          <i class="fas fa-book me-1"></i> Filter by Semester
+                        </label>
                         <select class="form-select" id="semesterFilter">
                           <option value="">All Semesters</option>
                           <option value="1ST SEMESTER">1ST SEMESTER</option>
                           <option value="2ND SEMESTER">2ND SEMESTER</option>
                         </select>
                       </div>
-                      <div class="col-md-4 d-flex align-items-end">
-                        <button class="btn btn-reset w-100" id="resetGradesFilter">Reset Filter</button>
+                      <div class="col-md-4 col-12 d-flex align-items-end">
+                        <button class="btn btn-reset w-100" id="resetGradesFilter">
+                          <i class="fas fa-redo me-1"></i> Reset Filter
+                        </button>
                       </div>
                     </div>
 
                     <!-- Grades Table -->
                     <div class="table-responsive">
-                      <table class="table table-bordered">
-                        <thead>
+                      <table class="table table-hover" id="gradesTable">
+                        <thead class="bg-maroon text-white">
                           <tr>
                             <th>Subject Code</th>
                             <th>Subject</th>
@@ -945,9 +1109,11 @@
                       <h2 class="grades-title"><i class="fas fa-bullhorn"></i> Announcements</h2>
 
                       <!-- Filter Section -->
-                      <div class="row mb-3">
-                        <div class="col-md-6">
-                          <label class="form-label">Filter by Category</label>
+                      <div class="row mb-3 g-3">
+                        <div class="col-md-6 col-12">
+                          <label class="form-label">
+                            <i class="fas fa-tag me-1"></i> Filter by Category
+                          </label>
                           <select class="form-select" id="categoryFilter">
                             <option value="">All Categories</option>
                             <option value="General">General</option>
@@ -957,8 +1123,10 @@
                             <option value="Important">Important</option>
                           </select>
                         </div>
-                        <div class="col-md-6 d-flex align-items-end">
-                          <button class="btn btn-reset w-100" id="resetAnnouncementFilter">Reset Filter</button>
+                        <div class="col-md-6 col-12 d-flex align-items-end">
+                          <button class="btn btn-reset w-100" id="resetAnnouncementFilter">
+                            <i class="fas fa-redo me-1"></i> Reset Filter
+                          </button>
                         </div>
                       </div>
                     </div>
